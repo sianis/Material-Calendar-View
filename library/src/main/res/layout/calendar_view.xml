@@ -62,7 +62,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_monday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
 
@@ -72,7 +71,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_tuesday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
 
@@ -82,7 +80,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_wednesday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
 
@@ -92,7 +89,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_thursday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
 
@@ -102,7 +98,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_friday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
 
@@ -112,7 +107,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_saturday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
 
@@ -122,7 +116,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="@string/material_calendar_sunday"
             android:textAllCaps="true"
             android:textColor="@color/daysLabelColor" />
     </LinearLayout>
