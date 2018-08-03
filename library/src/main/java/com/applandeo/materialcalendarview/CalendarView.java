@@ -121,7 +121,7 @@ public class CalendarView extends LinearLayout {
         }
     }
 
-    private void initCalendarProperties(TypedArray typedArray){
+    private void initCalendarProperties(TypedArray typedArray) {
         int headerColor = typedArray.getColor(R.styleable.CalendarView_headerColor, 0);
         mCalendarProperties.setHeaderColor(headerColor);
 
@@ -178,6 +178,8 @@ public class CalendarView extends LinearLayout {
         AppearanceUtils.setAbbreviationsBarColor(getRootView(), mCalendarProperties.getAbbreviationsBarColor());
 
         AppearanceUtils.setAbbreviationsLabelsColor(getRootView(), mCalendarProperties.getAbbreviationsLabelsColor());
+
+        AppearanceUtils.setAbbreviationsLabels(getRootView());
 
         AppearanceUtils.setPagesColor(getRootView(), mCalendarProperties.getPagesColor());
 

@@ -2,8 +2,6 @@ package com.applandeo.materialcalendarview.utils;
 
 import android.content.Context;
 
-import com.applandeo.materialcalendarview.R;
-
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
@@ -93,15 +91,14 @@ public class DateUtils {
      * @return A string of the formatted date containing a month's name and a year (in number)
      */
     public static String getMonthAndYearDate(Context context, Calendar calendar) {
-        return String.format("%s  %s",
-                context.getResources().getStringArray(R.array.material_calendar_months_array)[calendar.get(Calendar.MONTH)],
-                calendar.get(Calendar.YEAR));
+        return android.text.format.DateUtils.formatDateTime(context, calendar.getTimeInMillis(), android.text.format.DateUtils.FORMAT_SHOW_YEAR | android.text.format.DateUtils.FORMAT_NO_MONTH_DAY);
     }
 
     /**
      * This method returns a list of calendar objects between to dates
+     *
      * @param firstDay Calendar representing a first selected date
-     * @param lastDay Calendar representing a last selected date
+     * @param lastDay  Calendar representing a last selected date
      * @return List of selected dates between two dates
      */
     public static ArrayList<Calendar> getDatesRange(Calendar firstDay, Calendar lastDay) {
@@ -135,8 +132,9 @@ public class DateUtils {
 
     /**
      * This method is used to count a number of months between two dates
+     *
      * @param startCalendar Calendar representing a first date
-     * @param endCalendar Calendar representing a last date
+     * @param endCalendar   Calendar representing a last date
      * @return Number of months
      */
     public static int getMonthsBetweenDates(Calendar startCalendar, Calendar endCalendar) {

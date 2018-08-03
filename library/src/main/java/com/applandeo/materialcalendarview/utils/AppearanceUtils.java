@@ -8,6 +8,9 @@ import android.widget.TextView;
 
 import com.applandeo.materialcalendarview.R;
 
+import java.text.DateFormatSymbols;
+import java.util.Calendar;
+
 /**
  * Created by Mateusz Kornakiewicz on 04.01.2018.
  */
@@ -26,6 +29,17 @@ public final class AppearanceUtils {
         ((TextView) view.findViewById(R.id.fridayLabel)).setTextColor(color);
         ((TextView) view.findViewById(R.id.saturdayLabel)).setTextColor(color);
         ((TextView) view.findViewById(R.id.sundayLabel)).setTextColor(color);
+    }
+
+    public static void setAbbreviationsLabels(View view) {
+        String[] weekdays = DateFormatSymbols.getInstance().getShortWeekdays();
+        ((TextView) view.findViewById(R.id.mondayLabel)).setText(weekdays[Calendar.MONDAY]);
+        ((TextView) view.findViewById(R.id.tuesdayLabel)).setText(weekdays[Calendar.TUESDAY]);
+        ((TextView) view.findViewById(R.id.wednesdayLabel)).setText(weekdays[Calendar.WEDNESDAY]);
+        ((TextView) view.findViewById(R.id.thursdayLabel)).setText(weekdays[Calendar.THURSDAY]);
+        ((TextView) view.findViewById(R.id.fridayLabel)).setText(weekdays[Calendar.FRIDAY]);
+        ((TextView) view.findViewById(R.id.saturdayLabel)).setText(weekdays[Calendar.SATURDAY]);
+        ((TextView) view.findViewById(R.id.sundayLabel)).setText(weekdays[Calendar.SUNDAY]);
     }
 
     public static void setHeaderColor(View view, int color) {
@@ -61,9 +75,6 @@ public final class AppearanceUtils {
         view.findViewById(R.id.calendarViewPager).setBackgroundColor(color);
     }
 
-    private AppearanceUtils() {
-    }
-
     public static void setPreviousButtonImage(View view, Drawable drawable) {
         if (drawable == null) {
             return;
@@ -78,5 +89,8 @@ public final class AppearanceUtils {
         }
 
         ((ImageButton) view.findViewById(R.id.forwardButton)).setImageDrawable(drawable);
+    }
+
+    private AppearanceUtils() {
     }
 }
