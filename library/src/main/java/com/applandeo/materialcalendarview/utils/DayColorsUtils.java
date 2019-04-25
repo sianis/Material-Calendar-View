@@ -29,7 +29,7 @@ public class DayColorsUtils {
             return;
         }
 
-        textView.setTypeface(null, typeface);
+        //textView.setTypeface(null, typeface);
         textView.setTextColor(textColor);
         textView.setBackgroundResource(background);
     }
